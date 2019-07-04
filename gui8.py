@@ -139,11 +139,11 @@ def press(button):
     equation.set(expression)
 
 def evaluate(equation): 
+    global expression
     # Try and except is used to handle the errors, such as zero division
     if expression == "":
         return
     try:
-        global expression
         global answer
         # eval function evaluate the expression before str converts the result into strings
         result = str(eval(expression))
